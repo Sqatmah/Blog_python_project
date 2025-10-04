@@ -1,8 +1,8 @@
 from django.shortcuts import render
 #this is the import for class based views
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView,UpdateView
 from .models import Post
-from .forms import PostForm
+from .forms import PostForm,EditForm
 
 # Create your views here.
 # this is basic view function
@@ -30,6 +30,12 @@ class AddPostView(CreateView):
     #fields = '__all__'
    # fields = ('title','body')
 
+
+class UpdatePostView(UpdateView):
+    model = Post
+    form_class=EditForm
+    template_name = 'update_post.html'
+    #fields = ['title','title_tag','body']
 
 
 
