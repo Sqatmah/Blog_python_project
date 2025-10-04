@@ -1,15 +1,10 @@
+{% extends 'base.html' %} 
+ {% block title %} 
+  {{ post.title_tag}}
+ {% endblock %}
 
-<!--
-    <small>
-  By: 
-  {% if post.author.first_name %}
-      {{ post.author.first_name }} {{ post.author.last_name }}
-  {% else %}
-      {{ post.author.username }}
-  {% endif %}
-</small>
+{% block content %}
 
--->
 
 
 
@@ -21,7 +16,10 @@
 
 
     <br/><br/>
-    <a href="{% url 'home' %}">Back to Home</a>
+    <a href="{% url 'home' %}" class="btn btn-secondary">Back to Home</a>
+
+
+    {% endblock %}
     
 
 
