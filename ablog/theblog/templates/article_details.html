@@ -1,6 +1,27 @@
+
+<!--
+    <small>
+  By: 
+  {% if post.author.first_name %}
+      {{ post.author.first_name }} {{ post.author.last_name }}
+  {% else %}
+      {{ post.author.username }}
+  {% endif %}
+</small>
+
+-->
+
+
+
 <h1>{{ post.title}}</h1>
-<small>By: {{ post.author.first_name}} {{ 
-    post.author.last_name }}</small><br/>
+<small>By: {{ post.author.first_name }} {{ post.author.last_name }}</small><br/>
     <hr>
     <br/>
-    {{ post.body}}
+    {{ post.body }}
+
+
+    <br/><br/>
+    <a href="{% url 'home' %}">Back to Home</a>
+    
+
+
