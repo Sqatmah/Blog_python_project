@@ -2,6 +2,7 @@ from django.shortcuts import render
 #this is the import for class based views
 from django.views.generic import ListView, DetailView, CreateView
 from .models import Post
+from .forms import PostForm
 
 # Create your views here.
 # this is basic view function
@@ -24,8 +25,9 @@ class ArticleDetailView(DetailView):
 
 class AddPostView(CreateView):
     model = Post
+    form_class=PostForm
     template_name = 'add_post.html'
-    fields = '__all__'
+    #fields = '__all__'
    # fields = ('title','body')
 
 
