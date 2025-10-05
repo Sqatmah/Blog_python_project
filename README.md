@@ -23,18 +23,28 @@ It allows users to:
 
 ## 🏗️ Project Structure
 
+
 simpleblog/
 │
+
 ├── ablog/ # Main Django app
+
 │ ├── templates/ # HTML templates
+
 │ ├── static/ # CSS, JS, Images
+
 │ ├── models.py # Database models
+
 │ ├── views.py # App logic
+
 │ └── urls.py # URL routing
 │
 ├── manage.py # Django CLI tool
+
 ├── requirements.txt # Dependencies
+
 └── README.md # Project documentation
+
 
 
 
