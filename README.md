@@ -122,6 +122,5 @@ Then open your browser and visit 👉 http://127.0.0.1:8000/
 💻 github.com/Sqatmah
 
 
-<p align="center">Made with ❤️ using Django</p> ```
 
 
