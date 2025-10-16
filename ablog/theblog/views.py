@@ -4,7 +4,7 @@ from django.views.generic import ListView, DetailView, CreateView,UpdateView,Del
 from .models import Post
 from .forms import PostForm,EditForm
 from django.urls import reverse_lazy
-from theblog.repositories.post_repository import PostRepository
+from .repositories.services_repository import PostRepository
 
 # Create your views here.
 # this is basic view function

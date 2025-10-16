@@ -7,16 +7,24 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
 
-<h1>Add Post... </h1>
-<br/>
-<div class="form-group">
-    <form method="Post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-secondary">Post</button>
-</div>
-    
+    <h1>Add Post... </h1>
+    <br/>
+    <div class="form-group">
+        <form method="Post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-secondary">Post</button>
+    </div>
+        
+
+{% else %}
+
+You're not allowed here! (and you know it...)
+
+{% endif  %}
+        
 
 
 

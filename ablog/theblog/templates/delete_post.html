@@ -7,18 +7,26 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
 
-<h1>Delete Post... </h1>
-<br/>
-<h3>Delete: {{ post.title }}</h3>
-<br/>
-<div class="form-group">
-    <form method="Post">
-        {% csrf_token %}
-        ><strong>Are you sure ? </strong><br/><br/>
-        <button class="btn btn-success">Delete Post!</button>
-</div>
-    
+    <h1>Delete Post... </h1>
+    <br/>
+    <h3>Delete: {{ post.title }}</h3>
+    <br/>
+    <div class="form-group">
+        <form method="Post">
+            {% csrf_token %}
+            ><strong>Are you sure ? </strong><br/><br/>
+            <button class="btn btn-success">Delete Post!</button>
+    </div>
+
+{% else %}
+
+You're not allowed here! (and you know it...)
+
+{% endif  %}
+        
+        
 
 
 
